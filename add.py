@@ -17,4 +17,11 @@ def add(item):
   with open("today.json", "w") as outfile:
     json.dump(jsondata, outfile, indent=4)
     
-add("test2")    
+while True:
+  print("type 'exit' to exit")
+  item = input("type task: ")
+  if item=="exit":
+    break
+  else:
+    add(item)    
+  
