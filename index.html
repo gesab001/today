@@ -1,0 +1,42 @@
+<html>
+
+
+<body>
+
+<ol id="containerList">
+
+</ol>
+
+</body>
+
+<script>
+
+
+function loadTitles(data){
+	var containerList = document.getElementById("containerList");
+	for (var x=0; x<data["items"].length; x++){
+		var jsonItem = data["items"][x];
+		var liEl = document.createElement("LI");
+		liEl.innerHTML = jsonItem;
+		containerList.appendChild(liEl);
+
+		
+		
+		
+
+	}
+	
+}
+
+function fetchItems(filename){
+	
+fetch(filename)
+  .then((response) => response.json())
+  .then(loadTitles);
+  
+}
+
+fetchItems("today.json");
+</script>
+
+</html>
