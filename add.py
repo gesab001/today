@@ -19,9 +19,12 @@ def add(item):
     
 while True:
   print("type 'exit' to exit")
+  print("type 'clear' to clear tasks")
   item = input("type task: ")
   if item=="exit":
     break
+  elif item=="clear":
+    clear()
   else:
     add(item)    
   
